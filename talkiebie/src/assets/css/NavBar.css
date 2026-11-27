@@ -1,0 +1,130 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 50;
+
+}
+
+.navbar-menu-btn {
+    display: none;
+    padding: 8px;
+    margin-right: 8px;
+    color: #4b5563;
+    border-radius: 6px;
+}
+
+.navbar-menu-btn:hover {
+    background: #f3f4f6;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 32px;
+}
+
+.navbar-logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+}
+
+.navbar-tabs {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbar-tab {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.navbar-tab:hover {
+    color: #111;
+}
+
+.navbar-tab.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+}
+
+.navbar-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-new-post {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #3b82f6;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.navbar-new-post:hover {
+    background: #2563eb;
+}
+
+.navbar-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f472b6, #a855f7);
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .navbar-menu-btn {
+        display: block;
+    }
+
+    .navbar-tabs {
+        display: none;
+    }
+
+    .navbar-logo-text {
+        display: none;
+    }
+
+    .navbar-new-post {
+        /* display: none;*/
+    }
+
+    .navbar-logo {
+        margin-right: 0;
+    }
+}

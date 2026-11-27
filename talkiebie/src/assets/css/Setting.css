@@ -1,0 +1,42 @@
+.settingstyle {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    /*  height: 60px;
+    min-height: 60px;*/
+}
+
+.setting-style-item {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #282828;
+}
+
+.setting-style-item:hover {
+
+    background: rgba(0, 145, 234, .06);
+    ;
+}
+
+
+.setting-right-theme {
+
+    /*  position: absolute;
+    top: 3.8rem;
+    bottom: 2.3rem;
+    right: 0;
+    left: 0;*/
+    /*display: flex;*/
+    /* padding: 1rem 0;*/
+    gap: 1rem;
+    flex-direction: column;
+    overflow: auto;
+
+}

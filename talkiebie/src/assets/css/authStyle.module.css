@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+
+/* Container */
+.auth-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(11, 20, 26, 0.1);
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+
+
+
+}
+
+/* Logo/Header Area */
+.logo-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-header h2 {
+    color: #111b21;
+    /* Dark text matching the image */
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.logo-header p {
+    color: #667781;
+    /* Muted text color */
+    font-size: 14px;
+}
+
+/* Form Styles */
+.form-box {
+    display: none;
+    /* Hidden by default, toggled via JS */
+    animation: fadeIn 0.3s ease;
+}
+
+.form-box.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e9edef;
+    background-color: #f7f8fa;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #111b21;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    /* Teal accent border on focus matching the image header */
+    border-color: #00a884;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(0, 168, 132, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #8696a0;
+}
+
+/* Button */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    /* The signature WhatsApp teal color */
+    background-color: #00a884;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #008f6f;
+    /* Slightly darker on hover */
+}
+
+/* Toggle Text (Log in / Sign up links) */
+.toggle-text {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #667781;
+}
+
+.toggle-text a {
+    color: #00a884;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.toggle-text a:hover {
+    text-decoration: underline;
+}
+
+.popUpMessge {
+    width: 400px;
+    position: relative;
+    background: red;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: rgb(251 113 133);
+    opacity: 1;
+
+
+    /* animation: shakepopup 0.5s linear infinite;*/
+}
+
+.popUpMessge .progressBar {
+
+    width: 98%;
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    border-radius: 10px;
+    background: rgb(26 46 5);
+
+}
+
+
+.progressBarAnimation {
+
+    animation: progress 1.8s linear;
+
+}
+
+
+
+
+
+@keyframes shakepopup {
+
+    0% {
+        transform: translateX(-3%);
+    }
+
+    25% {
+        transform: translateX(3%);
+    }
+
+    50% {
+        transform: translateX(-2%);
+    }
+
+    75% {
+        transform: translateX(2%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+
+}
+
+
+@keyframes progress {
+
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        width: 75%;
+    }
+
+    100% {
+        width: 98%
+    }
+
+}

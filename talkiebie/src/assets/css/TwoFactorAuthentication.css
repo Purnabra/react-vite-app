@@ -1,0 +1,355 @@
+.two-factor-card {
+    width: 100%;
+    box-sizing: border-box;
+    /* padding: 24px;
+    border: 1px solid #343b4b;
+    border-radius: 14px;
+    background: #171a23;*/
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+.two-factor-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 12px 2px 12px
+}
+
+
+.two-factor-icon,
+.authenticator-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #252c3b;
+    font-size: 21px;
+}
+
+.two-factor-title h3 {
+    margin: 0 0 6px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.two-factor-title p,
+.authenticator-info p {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.two-factor-divider {
+    height: 1px;
+    background: #343b4b;
+    margin: 22px 0;
+}
+
+.two-factor-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 2px 12px 6px 12px
+}
+
+.authenticator-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.authenticator-info h4 {
+    margin: 0 0 6px;
+    color: #e5e7eb;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.toggle-switch {
+    position: relative;
+    flex-shrink: 0;
+    width: 46px;
+    height: 26px;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background: #454b57;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toggle-switch.active {
+    background: #2563eb;
+}
+
+.toggle-knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch.active .toggle-knob {
+    transform: translateX(20px);
+}
+
+.toggle-switch:focus-visible {
+    outline: 2px solid #60a5fa;
+    outline-offset: 4px;
+}
+
+.two-factor-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    color: #9ca3af;
+    font-size: 12px;
+    padding: 12px 12px 6px 12px
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #6b7280;
+}
+
+.status-dot.enabled {
+    background: #22c55e;
+}
+
+@media (max-width: 480px) {
+    .two-factor-card {
+        padding: 16px;
+    }
+
+    .two-factor-heading,
+    .two-factor-option {
+        gap: 10px;
+    }
+
+    .two-factor-title h3 {
+        font-size: 16px;
+    }
+}
+
+.two-factor-setup {
+    margin-top: 22px;
+    padding: 20px;
+    /* border: 1px solid #343b4b;*/
+    border-radius: 12px;
+    background: #11141d;
+    animation: setupFadeIn 0.3s ease;
+}
+
+.setup-heading h4 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    color: #f1f5f9;
+}
+
+.setup-heading p,
+.setup-step p {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.setup-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #24365b;
+    color: #93c5fd;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.setup-step h5 {
+    margin: 3px 0 7px;
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 22px auto 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.fake-qr {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    background-color: white;
+    background-image:
+        repeating-conic-gradient(#111 0% 25%,
+            transparent 0% 50%);
+    background-size: 14px 14px;
+    border: 5px solid white;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.qr-corner {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: white;
+    border: 5px solid #111;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.qr-corner::after {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    background: #111;
+}
+
+.qr-corner.top-left {
+    top: 0;
+    left: 0;
+}
+
+.qr-corner.top-right {
+    top: 0;
+    right: 0;
+}
+
+.qr-corner.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.qr-pattern {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 12px;
+    bottom: 12px;
+    background: #111;
+    border: 5px solid white;
+    box-sizing: content-box;
+}
+
+.qr-placeholder-note {
+    margin: 0;
+    text-align: center;
+    color: #fbbf24;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.verification-label {
+    display: block;
+    margin: 22px 0 8px;
+    color: #e5e7eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.verification-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #454b5a;
+    border-radius: 8px;
+    background: #1b202c;
+    color: #f8fafc;
+    font-size: 22px;
+    letter-spacing: 8px;
+    text-align: center;
+    outline: none;
+}
+
+.verification-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.verify-button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.verify-button:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.verify-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.setup-note {
+    margin: 18px 0 0;
+    color: #9ca3af;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@keyframes setupFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .two-factor-setup {
+        padding: 14px;
+    }
+
+    .fake-qr {
+        width: 150px;
+        height: 150px;
+    }
+}

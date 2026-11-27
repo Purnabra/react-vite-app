@@ -1,0 +1,86 @@
+.popup {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popupContent {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 40px 24px;
+    min-width: 300px;
+    text-align: center;
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.popup.show .popupContent {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.message {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+}
+
+/* Checkmark animation */
+.iconWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.checkmark {
+    width: 64px;
+    height: 64px;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+.checkmarkCircle {
+    stroke: #4caf50;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmarkCheck {
+    stroke: #4caf50;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke-linecap: round;
+    animation: stroke 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Progress bar */
+.progressBar {
+    height: 4px;
+    background: #4caf50;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 0;
+    opacity: 1;
+}

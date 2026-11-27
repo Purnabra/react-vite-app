@@ -1,0 +1,126 @@
+/* ---------- Lock the page to viewport height ---------- */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  /* page never scrolls */
+}
+
+.app {
+  height: 100vh;
+  /* was min-height — now fixed */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* page never scrolls */
+  background: #f7f7f7;
+}
+
+/* ---------- Body: navbar space + row layout ---------- */
+.app-body {
+  flex: 1;
+  display: flex;
+  padding-top: 64px;
+  /* space for Navbar */
+  overflow: hidden;
+  /* page never scrolls */
+  min-height: 0;
+  /* IMPORTANT: lets flex child actually shrink */
+  box-sizing: border-box;
+}
+
+/* ---------- Main: sidebar offset + feed + creators ---------- */
+.app-main {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  /* IMPORTANT */
+  /* ONE left offset, not margin + padding */
+  padding-left: 298px;
+  /* room for fixed Sidebar */
+  box-sizing: border-box;
+  overflow: hidden;
+  /* page never scrolls */
+}
+
+/* ---------- Middle feed: the ONLY scroller ---------- */
+.feed-column {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  /* IMPORTANT */
+  overflow-y: auto;
+  /* feed scrolls independently */
+  position: relative;
+  scrollbar-width: none;
+  /* anchor for sticky if needed */
+}
+
+/* ---------- Sticky header: sticky, not fixed ---------- */
+.feed-column .stickyTop {
+  position: sticky;
+  /* was fixed */
+  top: 0;
+  /* sticks to top of feed-column */
+  z-index: 2;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  /* so padding doesn't overflow */
+  /* NO margin-top: 64px — sticky handles its own position */
+  /* width set inline via stickyHeaderWidth, or just use 100% */
+  width: 100%;
+}
+
+/* ---------- Right creators panel: independent sticky scroll ---------- */
+.creators-column {
+  width: 381px;
+  flex-shrink: 0;
+  position: sticky;
+  /* fine — sticks within app-main */
+  top: 0;
+  align-self: flex-start;
+  max-height: 100%;
+  /* was calc(100vh - 100px); now fills app-main */
+  overflow-y: auto;
+  /* scrolls independently */
+  scrollbar-width: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  .creators-column {
+    display: none;
+  }
+
+  .app-main {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    padding: 6px;
+    padding-left: 6px;
+  }
+
+  .feed-column {
+    max-width: 100%;
+  }
+
+  .feed-column .stickyTop {
+    width: 100%;
+  }
+}
+
+
+//
+https://www.camwhores.tv/get_file/126/3886d8765c0104c6b7a2c072a8916eae/8234000/8234581/8234581.mp4/?v-acctoken=MTY1OXw5MDA2MDZ8MHw0YTI3OTg2NjJiMTM5ZWQ2YzU3ZjdhZDQwNmVlMDc0Nwc5e29876af3df802&rnd=1790855857537
+
+
+
+
+https://www.camwhores.tv/get_file/126/c9e45f9a92bde4ed7fc43998d61caaa5/8234000/8234430/8234430.mp4/?v-acctoken=MTY4Mnw5MDA2MDZ8MHxlM2Y5ZWNhYzc3MjFhMzQ4YjcxNWYyMTg5MWNjMWQ5OQfbfa09a589c99104&rnd=1790855989438

@@ -1,0 +1,146 @@
+.sidebar {
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    background: #0f0f0f;
+    border-right: 1px solid #282828;
+    z-index: 40;
+    transform: translateX(0);
+    transition: transform 0.2s ease-in-out;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* width: 298px;*/
+}
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 35;
+    display: none;
+}
+
+.sidebar-menu {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #afbed6;
+    text-align: left;
+    transition: background 0.15s, color 0.15s;
+}
+
+.sidebar-item:hover {
+    background: rgba(0, 145, 234, .06);
+    color: #c7d4ef;
+}
+
+.sidebar-item.active {
+    background: rgba(0, 145, 234, .06);
+    color: #c7d4ef;
+}
+
+.sidebar-section {
+    padding: 16px;
+    border-top: 1px solid #282828;
+}
+
+.sidebar-section-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-subs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-sub {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.sidebar-sub:hover {
+    background: rgba(0, 145, 234, .06);
+
+}
+
+.sidebar-sub-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c084fc, #f472b6);
+    flex-shrink: 0;
+}
+
+.sidebar-sub-name {
+    font-size: 14px;
+    color: #c9d3e4;
+}
+
+.sidebar-sub-dot {
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        display: block;
+    }
+}
+
+.sidebar.open {
+    scrollbar-width: none;
+}
+
+
+.sidebar {
+    width: 298px;
+}
+
+.sidebar.on-chat {
+    width: 336px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+}

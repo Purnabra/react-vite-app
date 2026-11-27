@@ -1,0 +1,39 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+
+
+    /*    gap: 16px;*/
+}
+
+.feed-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.feed-empty {
+    background: #fff;
+    border-radius: 12px;
+    padding: 60px 20px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+.feed-empty-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.feed-empty h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.feed-empty p {
+    font-size: 14px;
+    color: #6b7280;
+}

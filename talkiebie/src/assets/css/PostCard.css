@@ -1,0 +1,244 @@
+.post-card {
+    background: #0f0f0f;
+    /*  border-radius: 12px;*/
+    border-bottom: 1px solid #282828;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+
+.post-avatar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.post-avatar-ring {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(135deg, #facc15, #ec4899, #a855f7);
+}
+
+.post-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+    display: block;
+}
+
+.post-name-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.post-sub-btn {
+    background: #3b82f6;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.post-sub-btn:hover {
+    background: #2563eb;
+}
+
+.post-more-btn {
+    color: #6b7280;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.post-more-btn:hover {
+    background: #f3f4f6;
+}
+
+/* Text */
+.post-text {
+    padding: 0 16px 12px;
+    font-size: 14px;
+    color: #c7d4ef;
+    line-height: 1.5;
+}
+
+/* Media */
+.post-media {
+    position: relative;
+    background: #f3f4f6;
+    /*  height: 640px;*/
+    overflow: hidden;
+}
+
+.post-image {
+    /* width: 100%;
+    height: auto;
+    display: block;*/
+    /*max-height: 400px;*/
+    max-width: 100%;
+    object-fit: contain;
+    backdrop-filter: blur(50px);
+}
+
+.post-image.locked {
+    filter: blur(24px) brightness(0.7);
+    transform: scale(1.1);
+}
+
+.post-lock {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+}
+
+.post-lock-inner {
+    text-align: center;
+    padding: 24px;
+}
+
+.post-lock-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.post-lock-text {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.post-lock-btn {
+    background: #3b82f6;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.post-lock-btn:hover {
+    background: #2563eb;
+}
+
+.post-lock-btn:active {
+    transform: scale(0.97);
+}
+
+/* Actions */
+.post-actions {
+    display: flex;
+    gap: 20px;
+    padding: 12px 16px;
+    /* border-top: 1px solid #f3f4f6;*/
+}
+
+.post-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.post-action:hover {
+    background: #f9fafb;
+}
+
+.post-action.liked {
+    color: #ef4444;
+}
+
+/* Comments */
+.post-comments {
+    padding: 12px 16px 16px;
+    border-top: 1px solid #f3f4f6;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-comment {
+    font-size: 13px;
+    color: #374151;
+    display: flex;
+    gap: 8px;
+}
+
+.post-comment strong {
+    font-weight: 600;
+    color: #111;
+}
+
+.post-comment-form {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.post-comment-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    font-size: 13px;
+    outline: none;
+    background: #fff;
+}
+
+.post-comment-form input:focus {
+    border-color: #3b82f6;
+}
+
+.post-comment-form button {
+    background: #3b82f6;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.post-comment-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
