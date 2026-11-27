@@ -19,7 +19,7 @@ const ProtectedRoute = () => {
 
         if (!url) return;
         //  console.log(url);
-        fetch(`https://carried-overturn-joystick.ngrok-free.dev/api/user/authenticate`, {
+        fetch(`${import.meta.env.VITE_PROD_API_URL}/authenticate`, {
             method: "GET",
             credentials: "include"
         })

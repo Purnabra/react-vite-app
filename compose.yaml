@@ -1,0 +1,30 @@
+services:
+  app:
+    build:
+      context: ./talkiebie
+      dockerfile: Dockerfile
+
+    container_name: talkiebie-frontend
+    restart: unless-stopped
+
+    env_file:
+      - ./talkiebie/.env
+
+    environment:
+      NODE_ENV: production
+
+
+
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.talkiebie.rule=Host(`talkiebie.nextgenwilliam.tech`)
+      - traefik.http.routers.talkiebie.entrypoints=websecure
+      - traefik.http.routers.talkiebie.tls.certresolver=letsencrypt
+      - traefik.http.services.talkiebie.loadbalancer.server.port=5173
+
+    networks:
+      - talkiebie_default
+
+networks:
+  talkiebie_default:
+    external: true
