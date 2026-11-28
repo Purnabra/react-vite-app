@@ -9,6 +9,10 @@ services:
 
     env_file:
       - ./talkiebie/.env
+      
+    volumes:
+      - ./talkiebie:/app
+      - /app/node_modules      
 
     environment:
       NODE_ENV: production
