@@ -20,7 +20,7 @@ const Auth = () => {
 
         if (location.pathname === '/login') {
 
-            fetch("https://carried-overturn-joystick.ngrok-free.dev/api/user/authenticate", {
+            fetch(`${import.meta.env.VITE_PROD_API_URL}/api/user/authenticate`, {
                 method: "GET",
                 credentials: "include"
             }).then(resp1 => resp1.json()).then((data1) => {

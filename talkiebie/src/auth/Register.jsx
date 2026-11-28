@@ -12,9 +12,10 @@ const Register = ({ isLogin, styles, setIsLogin, setPopup, setContent, el }) => 
         e.preventDefault();
         const formdata = new FormData(e.target);
 
-        fetch("http://localhost:7000/api/register", {
+        fetch(`${import.meta.env.VITE_PROD_API_URL}/api/register`, {
             method: "POST",
-            body: formdata
+            body: formdata,
+			credentials: "include"
 
         })
             .then((resp) => resp.json())

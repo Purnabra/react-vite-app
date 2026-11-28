@@ -19,7 +19,7 @@ const ProtectedRoute = () => {
 
         if (!url) return;
         //  console.log(url);
-        fetch(`${import.meta.env.VITE_PROD_API_URL}/authenticate`, {
+        fetch(`${import.meta.env.VITE_PROD_API_URL}/api/user/authenticate`, {
             method: "GET",
             credentials: "include"
         })

@@ -17,7 +17,7 @@ const Login = ({ isLogin, styles, setIsLogin, setPopup, setContent, el }) => {
 
 
 
-        fetch("https://carried-overturn-joystick.ngrok-free.dev/api/login", {
+        fetch(`${import.meta.env.VITE_PROD_API_URL}/api/login`, {
             method: "POST",
             body: formdata,
             credentials: "include"

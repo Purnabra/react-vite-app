@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5173,
+	     allowedHosts: ['talkiebie.nextgenwilliam.tech'],
 
     /* https: {
        key: fs.readFileSync('./mkcert/localhost+2-key.pem'),
